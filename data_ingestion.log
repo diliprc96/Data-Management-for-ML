@@ -1,0 +1,60 @@
+2025-03-14 14:12:45,799 - 🚀 Data Ingestion Service Running...
+2025-03-14 14:12:47,806 - ✅ Synthetic dataset saved as 'synthetic_customer_data.csv'!
+2025-03-14 14:12:49,812 - data types: customer_id            object
+name                   object
+age                    object
+email                  object
+signup_date            object
+last_purchase_date     object
+total_spent           float64
+purchase_frequency      int64
+monthly_spending        int64
+subscription_plan      object
+churned               float64
+dtype: object
+2025-03-14 14:12:49,812 - Missing values BEFORE filling:
+customer_id           0
+name                  1
+age                   0
+email                 0
+signup_date           0
+last_purchase_date    0
+total_spent           0
+purchase_frequency    0
+monthly_spending      0
+subscription_plan     1
+churned               1
+dtype: int64
+2025-03-14 14:12:49,823 - Data validation successful. No issues found.
+2025-03-14 14:12:49,855 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-14 14:12:49,861 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-14 14:26:23,690 - 🚀 Data Ingestion Service Running...
+2025-03-14 14:26:25,694 - ✅ Synthetic dataset saved as 'synthetic_customer_data.csv'!
+2025-03-14 14:26:27,700 - data types: customer_id            object
+name                   object
+age                     int64
+email                  object
+signup_date            object
+last_purchase_date     object
+total_spent           float64
+purchase_frequency      int64
+monthly_spending        int64
+subscription_plan      object
+churned               float64
+dtype: object
+2025-03-14 14:26:27,700 - Missing values BEFORE filling:
+customer_id           0
+name                  1
+age                   0
+email                 0
+signup_date           0
+last_purchase_date    0
+total_spent           0
+purchase_frequency    0
+monthly_spending      0
+subscription_plan     1
+churned               1
+dtype: int64
+2025-03-14 14:26:27,705 - Data validation successful. No issues found.
+2025-03-14 14:26:27,728 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-14 14:26:27,732 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.

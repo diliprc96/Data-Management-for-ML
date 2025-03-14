@@ -1,0 +1,3 @@
+customer_id,name,age,email,signup_date,last_purchase_date,total_spent,purchase_frequency,monthly_spending,subscription_plan,churned
+6b56ec02-5463-44b6-ba4a-f9084bbff54a,Jessica Preston,19,lindaperry@example.net,2022-04-25,2023-03-01,1187.26,25,40,Enterprise,1.0
+93a916db-ff97-45ae-9db2-ba82882d6c65,,49,fwebb@example.net,2022-01-17,2022-02-02,5109.7,19,13,,

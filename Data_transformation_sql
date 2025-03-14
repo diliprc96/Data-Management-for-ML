@@ -1,0 +1,59 @@
+-- Create Customers Table
+CREATE TABLE customers (
+    customer_id SERIAL PRIMARY KEY,
+    first_transaction_date DATE,
+    total_spend NUMERIC,
+    avg_transaction_value NUMERIC,
+    tenure_days INT,
+    activity_frequency NUMERIC
+);
+
+-- Create Transactions Table
+CREATE TABLE transactions (
+    transaction_id SERIAL PRIMARY KEY,
+    customer_id INT REFERENCES customers(customer_id),
+    amount NUMERIC,
+    transaction_date DATE
+);
+
+-- Create Aggregated Metrics Table
+CREATE TABLE aggregated_metrics (
+    customer_id INT PRIMARY KEY REFERENCES customers(customer_id),
+    total_spend NUMERIC,
+    avg_transaction_value NUMERIC,
+    transaction_count INT,
+    last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert Sample Data
+INSERT INTO customers (customer_id, first_transaction_date) VALUES 
+(1, '2023-01-15'), 
+(2, '2022-06-10');
+
+INSERT INTO transactions (customer_id, amount, transaction_date) VALUES 
+(1, 100, '2023-02-01'),
+(1, 150, '2023-03-05'),
+(2, 200, '2022-07-15'),
+(2, 300, '2023-01-20');
+
+-- Aggregating Total Spend, Avg Transaction Value, and Transaction Count
+INSERT INTO aggregated_metrics (customer_id, total_spend, avg_transaction_value, transaction_count)
+SELECT
+    customer_id,
+    SUM(amount) AS total_spend,
+    AVG(amount) AS avg_transaction_value,
+    COUNT(transaction_id) AS transaction_count
+FROM transactions
+GROUP BY customer_id;
+
+-- Updating Customers Table with Aggregated Values
+UPDATE customers c
+SET total_spend = a.total_spend,
+    avg_transaction_value = a.avg_transaction_value,
+    tenure_days = EXTRACT(DAY FROM (CURRENT_DATE - c.first_transaction_date)),
+    activity_frequency = a.transaction_count / NULLIF(EXTRACT(DAY FROM (CURRENT_DATE - c.first_transaction_date)) / 30.0, 0)
+FROM aggregated_metrics a
+WHERE c.customer_id = a.customer_id;
+
+-- Retrieve Transformed Data
+SELECT * FROM customers;

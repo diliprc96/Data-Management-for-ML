@@ -1,0 +1,7 @@
+{
+    "feature_name": "tenure",
+    "description": "Number of months a customer has been with the company",
+    "source": "customers dataset",
+    "version": "v1",
+    "type": "numerical"
+}
