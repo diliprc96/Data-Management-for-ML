@@ -94,13 +94,13 @@ def validation():
 
     df = pd.read_csv("synthetic_customer_data.csv")
     # df["name"] = df["name"].fillna(faker.name())
-    logging.info("Missing Values:\n", df.isnull().sum())
+    # logging.info("Missing Values:\n", df.isnull().sum())
 
     # Check data types
-    logging.info(f'data types: {df.dtypes}')
+    # logging.info(f'data types: {df.dtypes}')
     # Python Code for Data Cleaning
     missing_before = df.isnull().sum()
-    logging.info(f"Missing values BEFORE filling:\n{missing_before}")
+    # logging.info(f"Missing values BEFORE filling:\n{missing_before}")
     # Log missing values AFTER filling
     missing_after = df.isnull().sum()
     print(f"Missing values AFTER filling:\n{missing_after}")
@@ -186,11 +186,16 @@ schedule.every(4).seconds.do(validation)
 
 
 logging.info("🚀 Data Ingestion Service Running...")
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
 # while True:
 #     logging.info(111)
 #     schedule.run_pending()
 #     logging.info(44)
 #     time.sleep(1)  # Check every minute
+print('Data ingestion started, fetching available data')
+while True:
+    print('logging info - check data ingestion log file generated')
+    print('Checking for new messages... 1 minute intervals')
+    time.sleep(60)

@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/Data-Management-for-ML/mlruns/0/63afde0962b140b6ae43c6f58de44927/artifacts
+end_time: 1742297586393
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 63afde0962b140b6ae43c6f58de44927
+run_name: bright-boar-7
+run_uuid: 63afde0962b140b6ae43c6f58de44927
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742297582084
+status: 3
+tags: []
+user_id: codespace

@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/Data-Management-for-ML/mlruns/0/93dd0d6b05ca4118b772f56c7f85b88d/artifacts
+end_time: 1742292337649
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 93dd0d6b05ca4118b772f56c7f85b88d
+run_name: able-cub-179
+run_uuid: 93dd0d6b05ca4118b772f56c7f85b88d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742292334124
+status: 3
+tags: []
+user_id: codespace

@@ -58,3 +58,128 @@ dtype: int64
 2025-03-14 14:26:27,705 - Data validation successful. No issues found.
 2025-03-14 14:26:27,728 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2025-03-14 14:26:27,732 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-18 09:16:55,359 - 🚀 Data Ingestion Service Running...
+2025-03-18 09:16:57,578 - ✅ Synthetic dataset saved as 'synthetic_customer_data.csv'!
+2025-03-18 09:16:59,585 - data types: customer_id            object
+name                   object
+age                    object
+email                  object
+signup_date            object
+last_purchase_date     object
+total_spent           float64
+purchase_frequency      int64
+monthly_spending        int64
+subscription_plan      object
+churned                 int64
+dtype: object
+2025-03-18 09:16:59,586 - Missing values BEFORE filling:
+customer_id           0
+name                  1
+age                   0
+email                 0
+signup_date           0
+last_purchase_date    0
+total_spent           0
+purchase_frequency    0
+monthly_spending      0
+subscription_plan     0
+churned               0
+dtype: int64
+2025-03-18 09:16:59,597 - Data validation successful. No issues found.
+2025-03-18 09:16:59,833 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-18 09:16:59,840 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-18 09:19:12,160 - 🚀 Data Ingestion Service Running...
+2025-03-18 09:19:14,164 - ✅ Synthetic dataset saved as 'synthetic_customer_data.csv'!
+2025-03-18 09:19:16,171 - data types: customer_id            object
+name                   object
+age                    object
+email                  object
+signup_date            object
+last_purchase_date     object
+total_spent           float64
+purchase_frequency      int64
+monthly_spending        int64
+subscription_plan      object
+churned               float64
+dtype: object
+2025-03-18 09:19:16,172 - Missing values BEFORE filling:
+customer_id           0
+name                  1
+age                   0
+email                 0
+signup_date           0
+last_purchase_date    0
+total_spent           0
+purchase_frequency    0
+monthly_spending      0
+subscription_plan     0
+churned               2
+dtype: int64
+2025-03-18 09:19:16,177 - Data validation successful. No issues found.
+2025-03-18 09:19:16,249 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-18 09:19:16,253 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-18 09:27:16,953 - 🚀 Data Ingestion Service Running...
+2025-03-18 09:27:18,958 - ✅ Synthetic dataset saved as 'synthetic_customer_data.csv'!
+2025-03-18 09:27:20,964 - data types: customer_id            object
+name                   object
+age                    object
+email                  object
+signup_date            object
+last_purchase_date     object
+total_spent           float64
+purchase_frequency      int64
+monthly_spending        int64
+subscription_plan      object
+churned               float64
+dtype: object
+2025-03-18 09:27:20,964 - Missing values BEFORE filling:
+customer_id           0
+name                  1
+age                   0
+email                 0
+signup_date           0
+last_purchase_date    0
+total_spent           0
+purchase_frequency    0
+monthly_spending      0
+subscription_plan     0
+churned               2
+dtype: int64
+2025-03-18 09:27:20,968 - Data validation successful. No issues found.
+2025-03-18 09:27:21,032 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-18 09:27:21,036 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-18 09:28:43,142 - 🚀 Data Ingestion Service Running...
+2025-03-18 09:28:45,146 - ✅ Synthetic dataset saved as 'synthetic_customer_data.csv'!
+2025-03-18 09:28:47,149 - data types: customer_id            object
+name                   object
+age                    object
+email                  object
+signup_date            object
+last_purchase_date     object
+total_spent           float64
+purchase_frequency      int64
+monthly_spending        int64
+subscription_plan      object
+churned               float64
+dtype: object
+2025-03-18 09:28:47,150 - Missing values BEFORE filling:
+customer_id           0
+name                  0
+age                   0
+email                 0
+signup_date           0
+last_purchase_date    0
+total_spent           0
+purchase_frequency    0
+monthly_spending      0
+subscription_plan     0
+churned               1
+dtype: int64
+2025-03-18 09:28:47,155 - Data validation successful. No issues found.
+2025-03-18 09:28:47,224 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-18 09:28:47,229 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-18 09:29:09,355 - 🚀 Data Ingestion Service Running...
+2025-03-18 09:29:11,359 - ✅ Synthetic dataset saved as 'synthetic_customer_data.csv'!
+2025-03-18 09:29:13,367 - Data validation successful. No issues found.
+2025-03-18 09:29:13,429 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-18 09:29:13,433 - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
