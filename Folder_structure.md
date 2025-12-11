@@ -1,4 +1,4 @@
-/workspaces/Data-Management-for-ML/
+Data-Management-for-ML/
     ├── dags/
     │    ├── data_pipeline.py  # The Airflow DAG script
     ├── data/

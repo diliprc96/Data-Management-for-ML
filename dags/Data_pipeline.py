@@ -1,36 +1,64 @@
+import os
+import logging
+import pandas as pd
+from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-from datetime import datetime
-import pandas as pd
-import os
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# File paths
+RAW_DATA_PATH = "data/raw_data.csv"
+INGESTED_DATA_PATH = "data/ingested_data.csv"
+TRANSFORMED_DATA_PATH = "data/transformed_data.csv"
 
 def ingest_data():
-    df = pd.read_csv("data/raw_data.csv")
-    df.to_csv("data/ingested_data.csv", index=False)
-    print("Data ingestion complete.")
+    try:
+        if not os.path.exists("data"):
+            os.makedirs("data")  # Ensure directory exists
+        df = pd.read_csv(RAW_DATA_PATH)
+        df.to_csv(INGESTED_DATA_PATH, index=False)
+        logger.info("Data ingestion complete.")
+    except Exception as e:
+        logger.error(f"Data ingestion failed: {e}")
+        raise
 
 def validate_data():
-    df = pd.read_csv("data/ingested_data.csv")
-    missing = df.isnull().sum()
-    if missing.any():
-        raise ValueError(f"Missing values found:\n{missing}")
-    print("Data validation passed.")
+    try:
+        df = pd.read_csv(INGESTED_DATA_PATH)
+        missing = df.isnull().sum()
+        if missing.any():
+            raise ValueError(f"Missing values found:\n{missing}")
+        logger.info("Data validation passed.")
+    except Exception as e:
+        logger.error(f"Data validation failed: {e}")
+        raise
 
 def prepare_data():
-    df = pd.read_csv("data/ingested_data.csv")
-    df["customer_tenure_years"] = df["tenure"] / 12  # Example feature engineering
-    df.to_csv("data/transformed_data.csv", index=False)
-    print("Data transformation complete.")
+    try:
+        df = pd.read_csv(INGESTED_DATA_PATH)
+        df["customer_tenure_years"] = df["tenure"] / 12  # Example feature engineering
+        df.to_csv(TRANSFORMED_DATA_PATH, index=False)
+        logger.info("Data transformation complete.")
+    except Exception as e:
+        logger.error(f"Data preparation failed: {e}")
+        raise
 
 def store_data():
-    os.system("dvc add data/transformed_data.csv && git commit -m 'Updated transformed dataset'")
-    print("Data stored in version control.")
+    try:
+        os.system(f"dvc add {TRANSFORMED_DATA_PATH} && git commit -m 'Updated transformed dataset'")
+        logger.info("Data stored in version control.")
+    except Exception as e:
+        logger.error(f"Data storage failed: {e}")
+        raise
 
 # Define DAG
 with DAG(
-    "data_pipeline",
-    default_args={"start_date": datetime(2024, 3, 14), "retries": 1},
-    schedule_interval="@daily",
+    "Data_pipeline",
+    default_args={"start_date": datetime(2023, 3, 18), "retries": 5},
+    schedule_interval="@daily",  # Use `schedule_interval` instead of `schedule`
     catchup=False,
 ) as dag:
 

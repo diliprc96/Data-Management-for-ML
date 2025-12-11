@@ -1,0 +1,12 @@
+faker
+schedule
+scikit-learn
+psycopg2-binary
+pandas
+missingno
+plotly
+nbformat>=4.2.0
+fastparquet
+mlflow
+apache-airflow
+

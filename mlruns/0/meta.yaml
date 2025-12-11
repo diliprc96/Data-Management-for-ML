@@ -1,6 +1,6 @@
-artifact_location: file:///workspaces/Data-Management-for-ML/mlruns/0
-creation_time: 1742292329202
+artifact_location: file:///home/dranzer/Desktop/Data-Management-for-ML/mlruns/0
+creation_time: 1742307936988
 experiment_id: '0'
-last_update_time: 1742292329202
+last_update_time: 1742307936988
 lifecycle_stage: active
 name: Default
